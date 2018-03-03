@@ -24,5 +24,16 @@ public class HelloWorldController {
         mav.addObject("siteName", this.siteName);
         return mav;
     }
-
+    
+    @RequestMapping(method = RequestMethod.GET, path="angular")
+    public String angular() {
+        return "index";
+    }
+    
+    
+    @RequestMapping(method = RequestMethod.GET, path="test")
+    public String test() {
+        return "index.html";
+    }
+    
 }
